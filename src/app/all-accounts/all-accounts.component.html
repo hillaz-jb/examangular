@@ -1,0 +1,22 @@
+<div class="container my-5">
+  <div class="float-end">
+    <a class="btn btn-primary" routerLink="/create_account">Créer un utilisateur</a>
+  </div>
+
+  <table class="table table-striped">
+    <thead>
+    <tr>
+      <th>Nickname</th>
+      <th>Email</th>
+    </tr>
+    </thead>
+    <tbody>
+    <tr *ngFor="let user of myArrayAccount">
+      <td>{{user.nickname}}</td>
+      <td>{{user.email}}</td>
+
+    </tr>
+    </tbody>
+  </table>
+
+</div>

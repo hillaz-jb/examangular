@@ -1,0 +1,15 @@
+<div *ngIf="myGame !== null" class="container">
+  <div class="row">
+
+    <div  class="card my-4">
+      <img class="img-fluid card-img-top" [src]=myGame.thumbnailCover alt="Champion artwork">
+      <div class="card-body">
+        <h4 class="card-title text-center">{{myGame.name}}</h4>
+        <p class="card-text text-center"><div class="d-flex flex-row">
+        <p *ngFor="let genre of myGame.genres"> {{genre}}</p>
+      </div>
+      </div>
+
+  </div>
+</div>
+</div>

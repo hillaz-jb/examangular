@@ -1,0 +1,57 @@
+<div class="container my-5">
+  <div class="row d-flex justify-content-center">
+
+      <form [formGroup]="userFormGroup">
+
+        <div class="input-group">
+          <div class="col-6 my-2">
+            <input  [formControlName]="'_nickname'"
+                    name="nickname"
+                    type="text"
+                    class="form-control"
+                    placeholder="Nickname"
+                    [class.is-invalid]="nickname.invalid && nickname.touched"
+            >
+          </div>
+          <div *ngIf="nickname.invalid && (nickname.dirty || nickname.touched)"
+               class="p-2 ms-2 col-5 alert-danger"
+          >
+            <div *ngIf="nickname.errors?.required">
+              Le nickname est requis
+            </div>
+            <div *ngIf="nickname.errors?.minlength">
+              Le nickname doit faire au moins 4 caractères
+            </div>
+          </div>
+        </div>
+
+
+        <div class="input-group">
+          <div class="col-6 my-2">
+            <input  [formControlName]="'_email'"
+                    name="email"
+                    type="text"
+                    class="form-control"
+                    placeholder="Email"
+                    [class.is-invalid]="email.invalid && email.touched"
+            >
+          </div>
+          <div *ngIf="email.invalid && (email.dirty || email.touched)"
+               class="p-2 ms-2 col-5 alert-danger"
+          >
+            <div *ngIf="email.errors?.required">
+              L'email est requis
+            </div>
+          </div>
+        </div>
+
+
+        <button class="btn btn-primary col-6" [disabled]="userFormGroup.invalid" (click)="onSubmit()">
+          Créer User
+        </button>
+      </form>
+
+  </div>
+
+</div>
+

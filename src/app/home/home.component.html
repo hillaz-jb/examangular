@@ -1,0 +1,10 @@
+<h1 class="text-center mt-5">Bibliothèque de jeux</h1>
+
+<app-gamelibrary *ngIf="thePage === '1'" [myPage]="setPage(thePage)"></app-gamelibrary>
+
+<app-gamelibrary *ngIf="thePage === '2'" [myPage]="setPage(thePage)"></app-gamelibrary>
+
+<p class="text-center">
+  <button (click)="thePage = '1'" class="btn btn-success me-4">page1</button>
+  <button (click)="thePage = '2'" class="btn btn-success">page2</button>
+</p>

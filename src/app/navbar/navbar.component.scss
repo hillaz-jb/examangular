@@ -1,0 +1,19 @@
+@import "../../styles/colors";
+
+.navbar {
+  padding: 2rem 0;
+  > a {
+    margin-left: 24rem;
+  }
+  > div {
+    margin-right: 24rem;
+  }
+}
+
+.navbar-dark .navbar-nav .nav-link {
+  color: rgba(255, 255, 255, 1);
+  &:hover,
+  &:focus {
+    color: $default-gold;
+  }
+}

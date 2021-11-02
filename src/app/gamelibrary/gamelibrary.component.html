@@ -1,0 +1,17 @@
+
+
+<div *ngIf="myArrayGames !== null" class="container">
+
+  <div class="row">
+    <div *ngFor="let game of myArrayGames; let i = index" class="col-3 d-flex flex-wrap">
+      <div  class="card my-4" style="width: 18rem;">
+        <img class="img-fluid card-img-top" [src]=game.thumbnailCover alt="Game logo">
+        <div class="card-body">
+          <h4 class="card-title text-center">{{game.name}}</h4>
+          <p class="card-text text-center">Date de sortie: {{formatDate()[i]}}</p>
+          <p class="text-center"><a routerLink="/game/{{game.id}}" class="btn btn-dark">View Details</a></p>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
